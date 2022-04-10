@@ -24,6 +24,6 @@ function toCelsius(f) {
 }
 // Question: why must the code below be written on HTML file?
 document.getElementById('p3').innerHTML = toCelsius(69);
-document.getElementById("p2").style.color = "red";
+document.getElementById("p3").style.color = "gold";
 
 

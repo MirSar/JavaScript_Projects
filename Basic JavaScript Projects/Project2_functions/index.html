@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script src="js/main.js"></script>
 
         <title>JavaScript function examples</title>
     </head>
@@ -21,17 +20,15 @@
         <br>
 
         <!--calling a function to convert F degrees to C degrees-->
-        <p id="p2">changing F to C</p>
+        <p id="p2">changing Fahrenheit to Celsius</p>
         <p id="p3"></p>
     
-        <!--Question: why doesn't the below code work with the external file (main.js)? -->
-        <!--script>
-            
-            document.getElementById("p3").innerHTML = toCelsius(69);
-            //changing color
-            document.getElementById("p2").style.color = "purple";
 
-       </script-->
+        
+        <!--Note: We need to have this script tag at the bottom of this HTML code to work properly
+        Generally the bottom of the body is the best place for the script tag. 
+        It allows the HTML page to load without running JavaScript too early.  -->
+       <script src="js/main.js"></script>
 
     </body>
 </html>
