@@ -11,20 +11,15 @@
     </head>
 
     <body>
-        <!--Arithmetic example 1 = add_function-->
-        <p id="Math">add example will appear here</p>
+        <!--Arithmetic examples -->
+        <p id="Math">Arithmetics example will appear here</p>
 
-        <button id="myBtn">try it</button>
+        <!--buttons will call main.js to display arithmetic examples-->
+        <button onclick="add_Function()">Click to add</button>
+        <button onclick="sub_Function()">Click to sub</button>
         
-        <script>
-            document.getElementById("myBtn").addEventListener("click", add_Function);
-
-            function add_Function() {
-                var addition = 2 + 2;
-                document.getElementById("Math").innerHTML = "2+2= " + addition;
-            }
-        </script>
-
+       
+       
         
    
     </body>
