@@ -18,7 +18,22 @@
         
         <!--creating an event on the paragraph element-->
         <p id="concatenate" onclick="concatFunction()"> click here! </p>
-        
+        <br>
 
+        <!--calling a function to convert F degrees to C degrees-->
+        <p id="p2">changing F to C</p>
+        <p id="p3"></p>
+    
+        <!--Question: why doesn't the below code work with the external file (main.js)? -->
+        <script>
+            
+            document.getElementById("p3").innerHTML = toCelsius(69);
+            //changing color
+            document.getElementById("p3").style.color = "red";
+
+       </script>
+
+    
+    
     </body>
 </html>
