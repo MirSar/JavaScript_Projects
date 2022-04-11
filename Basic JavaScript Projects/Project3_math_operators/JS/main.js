@@ -51,12 +51,19 @@ function negation_Operator() {
 function increment() {
     var m = document.getElementById("x").value;
     m++;
-    alert(m);
-    //document.getElementById("Math").innerHTML = m;    Question: this function works with the alert, but not with document.get.... like the other functions
+    document.getElementById("Math").innerHTML = m;
 }
 function decrement() {
     var n = document.getElementById("y").value;
     n--;
-    alert(n);
-    //document.getElementById("Math").innerHTML = n; Question: this function works with the alert, but not with document.get.... like the other functions   
+    document.getElementById("Math").innerHTML = n;
 }
+
+//Random number generator between 0 to 114
+function randomNum() {
+    var randx = Math.random() * 114;
+    document.getElementById("Math").innerHTML = randx;
+}
+    
+    
+  
