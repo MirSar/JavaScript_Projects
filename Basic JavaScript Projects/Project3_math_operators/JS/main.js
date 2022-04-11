@@ -46,3 +46,17 @@ function negation_Operator() {
     var x = 19;
     document.getElementById("Math").innerHTML = "negation operator of 19 is " + -x;
 }
+
+//example of increment and decrement of a variable
+function increment() {
+    var m = document.getElementById("x").value;
+    m++;
+    alert(m);
+    //document.getElementById("Math").innerHTML = m;    Question: this function works with the alert, but not with document.get.... like the other functions
+}
+function decrement() {
+    var n = document.getElementById("y").value;
+    n--;
+    alert(n);
+    //document.getElementById("Math").innerHTML = n; Question: this function works with the alert, but not with document.get.... like the other functions   
+}
