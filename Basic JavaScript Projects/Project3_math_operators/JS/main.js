@@ -28,3 +28,21 @@ function divide_Function() {
     var divide = 45 / 19;
     document.getElementById("Math").innerHTML = "45 / 19= " + divide;
 }
+
+//simple math function
+function simple_math() {
+    var calculateIt = (1+2)*10/2-5;
+    document.getElementById("Math").innerHTML = "(1+2)*10/2-5 = " + calculateIt;
+}
+
+//division operation, find the remainder --> % symbol
+function simple_math2() {
+    var division_remainder = 45 % 19;
+    document.getElementById("Math").innerHTML = "45 divided by 19 gives us a remainder of " + division_remainder;
+}
+
+//negation operator, which is also know as a unary operator
+function negation_Operator() {
+    var x = 19;
+    document.getElementById("Math").innerHTML = "negation operator of 19 is " + -x;
+}
