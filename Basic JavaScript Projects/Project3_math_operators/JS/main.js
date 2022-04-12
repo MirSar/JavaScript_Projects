@@ -62,7 +62,8 @@ function decrement() {
 //Random number generator between 0 to 114
 function randomNum() {
     var randx = Math.random() * 114;
-    document.getElementById("Math").innerHTML = randx;
+    var randx2 = Math.trunc(randx); //returns the integer part only
+    document.getElementById("Math").innerHTML = randx2;
 }
     
     
