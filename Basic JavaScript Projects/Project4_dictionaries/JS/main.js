@@ -10,6 +10,14 @@ function my_Dictionary() {
         sensors: ["light ","sound ", "proximity ", "tactile ", "temperature ", "positioning ", "acceleration "],
         controller: ["linearMotion ", "rotationMotion ", "sensorFeedback ", "systemDynamics "],
     }
+    
+    // this will delete an item from the my_Dictionary
+    //because it still selects the index allocated in the code, it will say undefined when 
+    //the index for the deleted item is selected
+    //also, the placement of this CODE matters!!! must be here in the function and before the execution codes
+    delete robotKeyComponents.electricMotors[1]; // second item (acMotors) is deleted
+
+    
     //variable randPS is assigned a random item from the powersupply list 
     var randIndex = Math.floor(Math.random() * robotKeyComponents.powerSupply.length)
     var randPS = robotKeyComponents.powerSupply[randIndex];
@@ -34,5 +42,7 @@ function my_Dictionary() {
     var randIndex5 = Math.floor(Math.random() * robotKeyComponents.controller.length)
     var rand_c = robotKeyComponents.controller[randIndex5];
     document.getElementById("c").innerHTML = rand_c;
-    
+
 }
+
+
