@@ -14,6 +14,13 @@ document.write("<br>");
 
 //console.log() method
 console.log(19 + 3);
+//console.log() check of data value and data type
+console.log(5 === "five"); //Return false by writing a different data type and different value
+console.log(19 === 19); //Return true by ensuring to match the data type and value.
+console.log("19" === 19); //Return false by writing a different data type but the same value for both.
+console.log(19 === 27); //Return false by writing the same data type but a different value for both.
+
+
 
 // NAN examples
 function nanFunction() {
@@ -45,7 +52,6 @@ function booboo() {
     document.getElementById("isSame").innerHTML = x1 == y1; //are the two data the same?
     
     document.getElementById("b1").style.color = 'green'; //changes the color of the text
-    
 }
 
 //checking data entry with triple equal method
@@ -58,5 +64,4 @@ function passCheck() {
     console.log(typeof (pc11)); //checking data's typeof
     console.log(typeof (pc22)); //checking data's typeof
 }
-
 
