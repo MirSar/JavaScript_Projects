@@ -79,3 +79,8 @@ function passCheck() {
     console.log(typeof (pc22)); //checking data's typeof
 }
 
+//Boolean Logic Operator, Not !
+function not_function() {
+    document.getElementById("Not").innerHTML = !(19 > 13); //true becomes false
+
+}
