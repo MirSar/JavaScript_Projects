@@ -7,6 +7,7 @@ document.write(typeof true);
 document.write("\n");
 document.write(typeof 19);
 document.write("<br>"); // this adds a line break.
+
 //Coercion example
 document.write("An example of a Coercion"+"\n");
 document.write("19" + 45);
@@ -14,11 +15,24 @@ document.write("<br>");
 
 //console.log() method
 console.log(19 + 3);
+
 //console.log() check of data value and data type
 console.log(5 === "five"); //Return false by writing a different data type and different value
 console.log(19 === 19); //Return true by ensuring to match the data type and value.
 console.log("19" === 19); //Return false by writing a different data type but the same value for both.
 console.log(19 === 27); //Return false by writing the same data type but a different value for both.
+
+//Examples of Boolean Logic Operators &&, ||, and !
+document.write("<br>"); // creating a new line
+document.write("Boolean Logic Operator examples:");
+document.write("<br>");
+document.write(19 > 9 && 9 > 6); //True
+document.write("&nbsp"); //adds a space; 
+document.write(19 > 9 && 9 == 6); //False
+document.write("&nbsp"); //adds a space; 
+document.write(19 > 9 || 9 == 6); //True
+document.write("&nbsp"); //adds a space; 
+document.write(19 < 9 || 9 < 6); //False
 
 
 
