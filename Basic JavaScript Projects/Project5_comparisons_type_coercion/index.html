@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-    
+    <head>  
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>P5_comparisons_type_coercion</title>
-    
+        <title>P5_comparisons_type_coercion</title> 
     </head>
 
     <body>
         <h1 style="font-variant: small-caps;">Project 5 - Comparisons_type_coercion</h1>
-
         <h3>Examples of functions from javaScript: </h3>
       
         <!--javaScript link-->
@@ -34,13 +31,28 @@
         
         <h3>Boolean examples</h3>
         <h4 id="b1" style="background-color: gold;width: fit-content;">Answer is here</h4>
-        x: <input type="number" name="x" id="x"> >  y:<input type="number" name="y" id="y"> 
-        <button onclick="booboo()" id="booboo_btn">True or False </button>
-        <p id="checkx"></p> 
-        <p id="checky"></p>
-
-
+        <!--using a double equal sign to compare two data-->
+        <p id="isSame" style="background-color: rgb(233, 227, 195);width: fit-content;">are the two numbers equal?</p>
         
+        x: <input type="number" name="x" id="x">  >  y:<input type="number" name="y" id="y"> 
+        <button onclick="booboo()" id="booboo_btn">True or False </button>
+    
+        <br>
+        <!--using triple equal to verify what is typed-->
+        <div>
+            <h3>Let's check if you RE-ENTERed the data successfully</h3>
+            <h4 id="ans" style="background-color: gold;width: fit-content;">Answer is here</h4>
+        
+            Enter Anything: <input type="password" name="firstEntry" id="pc1">  
+            Re-Enter same thing:<input type="password" name="secondEntry" id="pc2"> 
+            <button onclick="passCheck()">Are the two data entry the same?</button>
+        </div>
+        <br><br>
+
+
+    
+
+
     </body>
 
 </html>

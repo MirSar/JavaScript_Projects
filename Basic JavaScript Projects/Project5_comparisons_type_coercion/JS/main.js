@@ -12,6 +12,9 @@ document.write("An example of a Coercion"+"\n");
 document.write("19" + 45);
 document.write("<br>");
 
+//console.log() method
+console.log(19 + 3);
+
 // NAN examples
 function nanFunction() {
     var x = 0 / 0;
@@ -35,13 +38,25 @@ function nanFunction3() {
 
 //boolean examples
 function booboo() {
-    var x1 = document.getElementById("x").value;
-    var y1 = document.getElementById("y").value;
-    document.getElementById("b1").innerHTML = x1>y1; //!!!!this does not seem to work for negative numbers???
+    var x1 = parseInt(document.getElementById("x").value);//parseInt is necessary to change the string value to interger
+    var y1 = parseInt(document.getElementById("y").value);// for proper comparison 
+    
+    document.getElementById("b1").innerHTML = x1 > y1;
+    document.getElementById("isSame").innerHTML = x1 == y1; //are the two data the same?
+    
     document.getElementById("b1").style.color = 'green'; //changes the color of the text
-    document.getElementById("checkx").innerHTML = x1; // display the x1 value as a check
-    document.getElementById("checky").innerHTML = y1; //display the y1 value as a check
+    
 }
 
-//console.log() method
-console.log(19 + 3);
+//checking data entry with triple equal method
+function passCheck() {
+    var pc11 = document.getElementById("pc1").value; // .value gives back string value; needed
+    var pc22 = document.getElementById("pc2").value; // without .value typeof is object; wont work
+    
+    document.getElementById("ans").innerHTML = pc11 === pc22; //are the two data value and type the same?
+    document.getElementById("ans").style.color = 'blue'; //changes the color of the text
+    console.log(typeof (pc11)); //checking data's typeof
+    console.log(typeof (pc22)); //checking data's typeof
+}
+
+
