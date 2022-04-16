@@ -10,20 +10,26 @@
     <!--general style-->
     <style>
 
-        body {background-color: ivory;}
+        body {background-color: ivory;
+          
+        }
+
         h1 {background-color: rgba(15, 194, 15, 25%); 
             width: fit-content;
             box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+            margin-left: auto; /*this is to center*/
+            margin-right: auto; /*this is to center*/
         }
+
         div {
             background-color: antiquewhite;
             width: fit-content;
+            margin-left: auto; /*this is to center*/
+            margin-right: auto; /*this is to center*/
         }
 
     </style>
     
-    <!--Link to JavaScript main.js-->
-    <script src="JS/main.js"></script>
     <title>Project6_ternary_operators_constructors</title>
 
 </head>
@@ -32,7 +38,7 @@
     <h1>Project 6 - Ternary Operators Constructors</h1>
     <div class="rider_example">
         <p>Riders must be at least 52 centimeters tall to ride.</p>
-        <input id="height" value="Enter you height here" />
+        <input id="height" value="Enter your height here" />
         <button onclick="ride_function()">Click here</button>
         <p id="ride" style="background-color: gold; width: fit-content;"></p>
     </div>
@@ -44,11 +50,26 @@
         <p id="vote" style="background-color: gold; width: fit-content;"></p>
     </div>
 
+    <div class="vehical_example">
+        <button onclick="myFunction()">Click Here</button>
+        <p id="keywords_and_constructors"></p>
 
-    <div>
-
+        <button onclick="myFunction2()">Click here</button>
+        <p id="new_and_this"></p>
     </div>
 
+    <div class="reservedWords_example">
+        <p>tying to use a keyword "new" as a variable</p>
+        <p id="kr"></p>
+    </div>
+
+    <div>
+        <p>Example of Object Constructor function</p>
+        <p id="person1"></p>
+    </div>
+
+    <!--Link to JavaScript main.js-->
+    <script src="JS/main.js"></script>
 </body>
 
 </html>
