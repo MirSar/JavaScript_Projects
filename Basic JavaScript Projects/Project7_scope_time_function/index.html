@@ -17,6 +17,13 @@
             margin-left: auto; /*this is to center*/
             margin-right: auto; /*this is to center*/
         }
+        h3 {
+            color: blue;
+            width: fit-content;
+            text-align: center;
+            margin-left: auto; /*this is to center*/
+            margin-right: auto; /*this is to center*/
+        }
 
         div {
             background-color: antiquewhite;
@@ -36,19 +43,29 @@
     <h1>Project 7 scope time function</h1> 
 
     <div class="catchError">
-        <h3>Example 1: global var vs local var error</h3>
-        <p id="error1"></p>
+        <h3>Example 1: global Variable vs. local Variable</h3>
+        <p id="error1">error is generated here</p>
     </div>
 
     <div class="methodAssign">
-        <h3>Example 2: Method Assignment</h3>
+        <h3>Example 2: Method Assignment- Usage of If-Else statement</h3>
         <p id="m1" onclick=" wakeUpCall()">Click Here for a message</p>
     </div>
 
-    <div>
-        <h3>Example 3: </h3>
-
+    <div class="guessingGame">
+        <h3>Example 3: THE GUESSING GAME--Let's test to see if you are psychic</h3>
         
+        <p>Let's Play. Click the button when you are Ready :)</p>
+        
+        <button onclick="thinkOfNum()" style="text-align: center;">START GAME</button>
+        <p id="readyToPlay" style="text-align: center;">It will be a number between 0 to 100</p>
+        
+        Your Guess:<input type="number" name="guess" id="guess"> Standard Deviation: <input type="number" name="sd" id="sd">
+        
+        <button onclick="guessingGame()">Check your guess</button>
+        <p id="gameResult" style="background-color: gold; text-align: center;">Here is a clue</p>
+
+
     </div>
 
 
