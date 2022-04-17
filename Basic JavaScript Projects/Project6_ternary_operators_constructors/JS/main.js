@@ -40,7 +40,8 @@ document.getElementById("kr").innerHTML = Xnew;        //Note: <script>tag needs
                                                       //Html needs to load so id="kr" is identified before the script is run.
                                                       // can also use window.onload with the function so it can wait till the DOM is loaded 
 
-//example 5: write an Object Constructor function
+
+                                                      //example 5: write an Object Constructor function
 //Constructor function for Person objects
 function Person(first, last, age, residence) {
     this.firstName = first;
@@ -49,7 +50,32 @@ function Person(first, last, age, residence) {
     this.residence = residence;
 }
 //creating a Person Object
-const myNiece_1 = new Person("Rebecca", "Zamoroa", 27, "Tracy");
+const myFriend_1 = new Person("Ruby", "Zamoroa", 27, "Tracy");
 //Display
-document.getElementById("person1").innerHTML = "My neice's name is " + myNiece_1.firstName + " " + myNiece_1.lastName + " she is " + myNiece_1.age + " years old and lives in " + myNiece_1.residence;
+document.getElementById("person1").innerHTML = "My friend's name is " + myFriend_1.firstName + " " + myFriend_1.lastName + " she is " + myFriend_1.age + " years old and lives in " + myFriend_1.residence;
 
+//Example 5: Nested functions
+var totalWins1 = 0;
+var totalWins2 = 0;
+function game1() {
+    var p1, p2, winning, winningGame; //variables being used
+    
+    p1 = parseInt(document.getElementById("score1").value); //gets the score of player1
+    p2 = parseInt(document.getElementById("score2").value);//gets the score of player 2 
+    winning = (p1 > p2) ? player1_fun() : player2_fun();
+    function player1_fun() {
+        document.getElementById("result").innerHTML = "Player one won this game!";
+        totalWins1++;
+        console.log(p1);
+        console.log(totalWins1);
+    }
+    function player2_fun() {
+        totalWins2++;
+        document.getElementById("result").innerHTML = "Player two won this game!";
+        console.log(p2);
+        console.log(totalWins2);
+    }
+    winningGame = (totalWins1 > totalWins2) ? "Player One is ahead and has won a total of " + totalWins1 + "games" : "Player two is ahead and has won a total of " + totalWins2 + "games";
+    document.getElementById("status").innerHTML = winningGame;
+
+}
