@@ -50,9 +50,11 @@ function Person(first, last, age, residence) {
     this.residence = residence;
 }
 //creating a Person Object
-const myFriend_1 = new Person("Ruby", "Zamoroa", 27, "Tracy");
+const myFriend_1 = new Person("Ruby", "Zamoroa", 27, "California");
 //Display
-document.getElementById("person1").innerHTML = "My friend's name is " + myFriend_1.firstName + " " + myFriend_1.lastName + " she is " + myFriend_1.age + " years old and lives in " + myFriend_1.residence;
+function whoYouKnow() {
+    document.getElementById("person1").innerHTML = "My friend's name is " + myFriend_1.firstName + " " + myFriend_1.lastName + " she is " + myFriend_1.age + " years old and lives in " + myFriend_1.residence;
+}
 
 //Example 5: Nested functions
 var totalWins1 = 0;
