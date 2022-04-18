@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--general style-->
+        <style>
+            body {background-color: ivory;}
+
+            h1 {background-color: rgba(15, 194, 15, 25%); 
+                width: fit-content;
+                box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+            h3 {
+                color: blue;
+                width: fit-content;
+                text-align: center;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+
+            div {
+                background-color: antiquewhite;
+                width: fit-content;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+        </style>
+        
+        <title>Project 8: String Methods</title>
+    </head>
+
+    <body>
+        <H1>Project 8: String Methods</H1>
+        <div class="slice_Method">
+            <h3>Example 1: Slice() method</h3>
+            <p id="slice">"All work and no play makes Jack a dull boy."</p>
+            <button onclick="slice_method()">Whom are we talking about?</button>
+        </div>
+        
+        <div class="toUpperCase_Method">
+            <h3>Example 2: toUpperCase() method</h3>
+            <p id="toUpperCase">"All work and no play makes Jack a dull boy."</p>
+            <button onclick="toUpperCase_method()">Change it to uppercase</button>
+        </div>
+
+        <div class="search_Method">
+            <h3>Example 3: search() method</h3>
+            <p id="search">"All work and no play makes Jack a dull boy."</p>
+            <p id="search2">Jack's position is...</p>
+            <button onclick="search_method()">What's Jack's position?</button>
+        </div>
+
+        <div class="toString_Method">
+            <h3>Example 4: toString() method</h3>
+            <p>Use this mehtod to change a data type into string:</p>
+            Number: <p id="toString">number and data type will appear here </p>
+            String: <p id="toString2">number and data type will appear here</p>
+            <button onclick="toString_method()">show the data type</button>
+        </div>
+
+
+        <!--Link to JavaScript main.js-->
+        <script src="JS/main.js"></script>
+    </body>
+
+</html>
