@@ -1,6 +1,6 @@
-/*Project 9: Countdown Slideshow
-==================================*/
-/*/Example 1: Timer that will countdown by secs.
+/*===================================  Project 9: Countdown & Slideshow  ==================================
+==========================================================================================================*/
+//Example 1: Timer that will countdown by secs.
 function countdown() {
     var seconds = document.getElementById("seconds").value; //user input for duration of time
 
@@ -15,9 +15,9 @@ function countdown() {
         }
     }
     tick();
-}  */
+}
 
-//Let's put on a good slideshow! type = Carousel
+//EXample 2: Slide Show;  type = Carousel 
 
 let slideIndex = 1;
 showSlides(slideIndex);

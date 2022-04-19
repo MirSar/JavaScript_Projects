@@ -1,28 +1,35 @@
 /*============================================
- General Style 
-==============================================                 /
+General Style 
+============================================== */
 body {background-color: ivory;}
 
 h1 {background-color: rgba(15, 194, 15, 25%); 
     width: fit-content;
     box-shadow: 5px 10px rgba(72, 90, 180, 25%);
-    margin-left: auto; /*this is to center                  /
-    margin-right: auto; /*this is to center                /
+    margin-left: auto; /*this is to center     */
+    margin-right: auto; /*this is to center   */
 }
 
-h3 {
-    color: blue;
+/*=========================
+timerCountdown Style
+============================*/
+.timerCountdown {
+    background-color: aqua;
     width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+#seconds{
     text-align: center;
-    margin-left: auto; /*this is to center                 /
-    margin-right: auto; /*this is to center               /
+    font-size: medium;
+    color: green;
 }
-
-div {
-    background-color: antiquewhite;
-    width: fit-content;
-    margin-left: auto; /*this is to center                 /
-    margin-right: auto; /*this is to center               /
+#timer{
+    text-align: center;
+    font-size: xx-large;
+    color: red;
+    font-style: bold;
+    font-family: cursive;
 }
 /*===============================================
 Slideshow - Carousel
@@ -34,14 +41,21 @@ Style for: next&prev buttons, caption text, and dots
 
 /* ---Slideshow container---*/
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 90%;
     position: relative;
     margin: auto;
+    object-fit: contain;
 }
 
 /* ---Hide the images by default---*/
 .mySlides {
     display: none;
+}
+
+/*img*/
+.mySlides img {
+    width: 100%;
+    
 }
 
 /* ---next & prev buttons---*/
@@ -67,7 +81,7 @@ Style for: next&prev buttons, caption text, and dots
 }
 
 /*---On hover, add a background color with some transparency---*/
-.prev:hover, .next:hover {
+.prev:hover, .next:hover, .text:hover {
     background-color: rgba(133, 247, 133, 0.8);
 }
 
