@@ -1,0 +1,119 @@
+/*============================================
+ General Style 
+==============================================                 /
+body {background-color: ivory;}
+
+h1 {background-color: rgba(15, 194, 15, 25%); 
+    width: fit-content;
+    box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+    margin-left: auto; /*this is to center                  /
+    margin-right: auto; /*this is to center                /
+}
+
+h3 {
+    color: blue;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto; /*this is to center                 /
+    margin-right: auto; /*this is to center               /
+}
+
+div {
+    background-color: antiquewhite;
+    width: fit-content;
+    margin-left: auto; /*this is to center                 /
+    margin-right: auto; /*this is to center               /
+}
+/*===============================================
+Slideshow - Carousel
+Style for: next&prev buttons, caption text, and dots
+=================================================*/
+* {
+    box-sizing: border-box;
+}
+
+/* ---Slideshow container---*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* ---Hide the images by default---*/
+.mySlides {
+    display: none;
+}
+
+/* ---next & prev buttons---*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease; /*change property values smoothly, over a given duration.*/
+    border-radius: 0 3px 3px 0;
+    user-select: none; /*property specifies whether the text of an element can be selected. */
+}
+
+/* ---Position the "net button" to the right---*/
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*---On hover, add a background color with some transparency---*/
+.prev:hover, .next:hover {
+    background-color: rgba(133, 247, 133, 0.8);
+}
+
+/*---Caption text---*/
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/*---Number text (1/3 etc)---*/
+.numberText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*---The dots/bullets/indicators---*/
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block; /*keeps them on the same line*/
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #717171;
+}
+
+/*---Fading animation---*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.9s;
+}
+
+@keyframes fade {
+    from {opacity: .3}
+    to {opacity: 1}
+}
