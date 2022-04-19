@@ -9,7 +9,7 @@ function countdown() {
         timer.innerHTML = seconds; //displays the seconds in <p id=timer>
         var time = setTimeout(tick, 1000); //program is pausing for 1,000 ms (1sec) before it calls "tick" **must be above if statement to function properly
         if (seconds == -1) {  //indicates time has run out at zero sec
-            alert("Time's up!"); //displayed when time runs out
+            alert("It's Show Time!"); //displayed when time runs out
             clearTimeout(time); //clears a timer set with the setTimeout() method.
             timer.innerHTML = ""; //clears the countdown display area
         }
@@ -35,7 +35,7 @@ function currentSlide(n) {
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dots");
+    let dots = document.getElementsByClassName("dot");
     
     if (n > slides.length) {
         slideIndex = 1;
