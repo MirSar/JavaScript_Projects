@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--general style-->
+        <style>
+            body {background-color: ivory;}
+
+            h1 {background-color: rgba(15, 194, 15, 25%); 
+                width: fit-content;
+                box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+            h3 {
+                color: blue;
+                width: fit-content;
+                text-align: center;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+
+            div {
+                background-color: antiquewhite;
+                width: fit-content;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+        </style>
+        
+        <!--Link to JavaScript main.js-->
+        <script src="JS/main.js" defer></script>
+
+        <title>Project 10: Loops & Arrays </title>
+    </head>
+
+    <body>
+        <H1>Project 10: Loops & Arrays</H1>
+        <div class="example1">
+            <h3>Example 1: while loop</h3>
+            <P>Loops through the block of code as long as the condition is true</P>
+            <p style="text-align: center;">-------------------------------------</p>
+            <p>Enter a name and how many complements you wish to send</p>
+            <input type="text" id="name" /> <input type="number" id="repeatIt" />
+            <br>
+            <p id="textMe"></p>
+            <button onclick="call_loop()">Give me my complements!</button>
+        </div>
+
+        <div class="example2">
+            <h3>Example 2: for loop</h3>
+            <p>Enter a name</p>
+            <input type="text" id="name2" />
+
+            <p id="list_of_instruments"></p>
+            <button onclick="for_loop()">Click here</button>
+        </div>
+
+        <div class="example3">
+            <h3>Example 3: Array function </h3>
+            <p>Click to store your item</p>
+            <input type="text" id="newItem" />
+            
+            <p id="array">How many items do I have stored?</p>
+            <button onclick="storeItem()">Store my Item</button>
+
+            <p id="array2">stored in vault</p>
+            <button onclick="array_function()">Show what I have in vault</button>
+        </div>
+        
+        <div class="example4">
+            <h3>Example 4: Const keyword</h3>
+            <p id="constant" style="background-color: aquamarine; width: fit-content;">BioRobotics properties:</p>
+            
+            <button onclick="constant_function1()">Show Intelligence</button>
+            <button onclick="constant_function2()">Show Power</button>
+            <button onclick="constant_function3()">Show Sense Perception</button>
+            <button onclick="constant_function4()">Show Dexterity</button>
+            <br>
+            <p>Modify properties value</p>
+            <input type="text" placeholder="type" id="modConst"/>
+            <button onclick="modConstant_function1()">Mod Intelligence</button>
+            <button onclick="modConstant_function2()">Mod Power</button>
+            <button onclick="modConstant_function3()">Mod Sense Perception</button>
+            <button onclick="modConstant_function4()">Mod Dexterity</button>
+            <br>
+            <button onclick="addNewProperty_Const()">Add Hobby/Reset</button>
+            <button onclick="constant_function5()">Show Hobby</button>
+            <button onclick="modConstant_function5()">Mod Hobby</button>
+        </div>
+       
+    </body>
+
+</html>
