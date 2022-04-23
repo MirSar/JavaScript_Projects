@@ -36,16 +36,17 @@ function for_loop() {
 }
 
 //Example 3: Array
-let vault = []; //global array for the two functions below
-function array_function() { //this function displays the content of the array
-    document.getElementById("array2").innerHTML = vault;
+{
+    let vault = []; //global array for the two functions below
+    function array_function() { //this function displays the content of the array
+        document.getElementById("array2").innerHTML = vault;
+    }
+    function storeItem() { //this function adds new content to the array
+        let newItem = document.getElementById("newItem").value; //gets new item value, let variable has block scope
+        vault.push(newItem); //adds new item to array
+        document.getElementById("array").innerHTML = "You have " + vault.length + " items in the vault.";
+    }
 }
-function storeItem() { //this function adds new content to the array
-    let newItem = document.getElementById("newItem").value; //gets new item value
-    vault.push(newItem); //adds new item to array
-    document.getElementById("array").innerHTML = "You have " + vault.length + " items in the vault.";
-}
-
 //Example 4: Const keyword
 const BioRobotics = {
     Intelligence: "Advanced AI",
@@ -73,7 +74,7 @@ function constant_function5() {
 
 //modifying properties
 function modConstant_function1() {
-    let inputvalue = document.getElementById("modConst").value;
+    let inputvalue = document.getElementById("modConst").value; //let variable has block scope
     BioRobotics.Intelligence = inputvalue;
 }
 function modConstant_function2() {
