@@ -37,7 +37,7 @@ function for_loop() {
 
 //Example 3: Array
 {
-    let vault = []; //global array for the two functions below
+    let vault = []; //let array has block scope therefore used only for the two functions below
     function array_function() { //this function displays the content of the array
         document.getElementById("array2").innerHTML = vault;
     }
@@ -97,4 +97,18 @@ function modConstant_function5() {
 //Adding a new property with value
 function addNewProperty_Const() {
     BioRobotics.Hobby = "Serving my assigned human";    
+}
+
+//Example 5: Return example using product of two numbers
+function productReturn(){ 
+    
+    let num1 = parseInt(document.getElementById("num1").value);
+    let num2 = parseInt(document.getElementById("num2").value);
+    
+    let result = productFunction(num1, num2);
+    document.getElementById("ex5").innerHTML = result;
+    
+    function productFunction(num1, num2) {
+        return num1 * num2;
+    }
 }
