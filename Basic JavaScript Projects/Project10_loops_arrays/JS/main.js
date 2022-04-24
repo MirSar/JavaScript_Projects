@@ -5,7 +5,7 @@ Project 10: Loops & Arrays
 function call_loop() {
     var repeatIt = document.getElementById("repeatIt").value;
     var name = document.getElementById("name").value;
-    const complements = ["good", "creative", "innovative", "great", "smart", "healthy", "kind", "sexy", "generous", "fun", "honest", "just", "exciting"];
+    const complements = ["good", "brillante", "brillient", "creative", "innovative", "great", "smart", "healthy", "kind", "sexy", "generous", "fun", "honest", "just", "exciting"];
     let compLength = parseInt(complements.length); //gets the number of items in the Array
     let i = 0; //used for the while loop
     let randcomp;
@@ -32,7 +32,6 @@ function for_loop() {
         content += "and " + instruments[instruments.length-1];
     }
     document.getElementById("list_of_instruments").innerHTML= name +"\'s collection of instruments: "+ content;
-
 }
 
 //Example 3: Array
@@ -71,7 +70,6 @@ function constant_function4() {
 function constant_function5() {
     document.getElementById("constant").innerHTML ="Your BioRobot's hobby is "+ BioRobotics.Hobby;
 }
-
 //modifying properties
 function modConstant_function1() {
     let inputvalue = document.getElementById("modConst").value; //let variable has block scope
@@ -85,7 +83,7 @@ function modConstant_function3() {
     let inputvalue = document.getElementById("modConst").value;
     BioRobotics.sensePerception = inputvalue;
 }
-function modCzonstant_function4() {
+function modConstant_function4() {
     let inputvalue = document.getElementById("modConst").value;
     BioRobotics.Dexterity = inputvalue;
 }
@@ -107,8 +105,45 @@ function productReturn(){
     
     let result = productFunction(num1, num2);
     document.getElementById("ex5").innerHTML = result;
-    
+
     function productFunction(num1, num2) {
         return num1 * num2;
     }
+}
+
+//Example 6: Object with method
+function ex6_btn() {
+    let name = document.getElementById("ex6_input").value;
+    let car = {
+        make: "BMW",
+        model: "M3",
+        year: "2001",
+        color: "silver",
+        description: function () {
+            return this.color + ", " + this.year + ", " + this.make + "-" + this.model + ".";
+        }
+    }
+    document.getElementById("object6").innerHTML = name + " drives a " + car.description();
+}
+
+//Example 7: break and continue statements
+function skipIt_fun() {
+    let i = 0
+    let skipIt = parseInt(document.getElementById("ex7_input").value);
+    let text = "";
+    for (i = 0; i < 10; i++){
+        if (i === skipIt) { continue; }
+        text += "The count is on " + i + "<br>";
+    }
+    document.getElementById("ex7_output").innerHTML = text;
+}
+function breakIt() {
+    let i = 0
+    let breakIt = parseInt(document.getElementById("ex7_input2").value);
+    let text = "";
+    for (i = 0; i < 10; i++){
+        if (i === breakIt) { break; }
+        text += "The count is on " + i + "<br>";
+    }
+    document.getElementById("ex7_output").innerHTML = text;
 }

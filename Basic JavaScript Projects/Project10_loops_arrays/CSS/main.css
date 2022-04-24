@@ -1,0 +1,37 @@
+/* ===============================
+Project 10: Loops Arrays
+=================================*/
+body {
+    background-image: url("../images/bkg_garden.png"); /*Background image used*/
+    background-color: aquamarine; /*used if the image is unavailable*/
+    background-position: center; /*center the image*/
+    background-repeat: no-repeat; /* do not repeat the image */
+    background-size: cover; /* resize image to cover the entire container */
+    z-index: -2;   
+}
+
+h1 {background-color: rgba(15, 194, 15, 25%); 
+    width: fit-content;
+    box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+h3 {
+    color: blue;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+div {
+    background-color: rgb(200, 230, 206);
+    width: fit-content;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+    padding: 1%;
+}
+button{
+    padding: 1%;
+}
