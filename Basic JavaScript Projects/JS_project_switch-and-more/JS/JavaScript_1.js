@@ -57,5 +57,43 @@ function colorFun() {
             //break; is not needed for default case.
     }
     document.getElementById("SS_output").innerHTML = colorOutput;
-
 }  
+
+//Example 2: ByClassName() method
+function byClassName_fun() {
+    var randnum = Math.floor(Math.random()*3); //gives us 0,1, or 2
+    var output = document.getElementsByClassName("ex2-1"); //gets all of elements with that class name
+    output[randnum].style.color = "green";
+    output[randnum].style.font = "19px Cursive";
+    output[randnum].innerHTML = "I changed! ;)";
+    
+}
+
+//Example 3: Canvas element
+function canvas_fun() {
+    var context = document.getElementById("canvas").getContext("2d"); //drawing on 2d canvas
+
+    //create gradient
+    var grad = context.createRadialGradient(180, 162, 130,180, 162, 60);
+    grad.addColorStop(0, "green");
+    grad.addColorStop(1, "white"); 
+    grad.addColorStop(.5, "gold");
+    // fill with gradient
+    context.fillStyle = grad;
+    context.fillRect(50, 85, 300, 200);
+    
+    //create smily face
+    context.strokeStyle = "blue"; // outline will be blue color
+    context.beginPath(); //the start of image
+    context.arc(180, 162, 70, 0, Math.PI * 2, true); //face full as a circle
+    context.moveTo(230, 162); // move for the smile location
+    context.arc(180, 162, 50, 0, Math.PI, false); //smile arc
+    context.moveTo(155, 135);
+    context.arc(150, 135, 5, 0, Math.PI * 2, true); //eye
+    context.moveTo(215, 135);
+    context.arc(210, 135, 5, 0, Math.PI * 2, true); //eye
+    context.font = "25px Cursive"; //text font style
+    context.textAlign = "center"; //center the text around 215 mark
+    context.fillText("Smile when coding", 200, 60); //text
+    context.stroke(); //end of image
+}
