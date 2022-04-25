@@ -1,0 +1,95 @@
+/*=============================================
+Project 11: Basic Contact Form 
+files: html_2.html, JavaScript_2.js, CSS_1.css
+===============================================*/
+/* General StyleSheet */
+
+h1 {
+    background-color: rgba(15, 194, 15, 25%); 
+    width: fit-content;
+    box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+h3 {
+    color: rgb(69, 69, 119);
+    width: fit-content;
+    text-align: center;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+/*---------------------------------------------
+ Stylesheet for Form
+----------------------------------------------*/
+/*for all elements */
+* {                           
+    box-sizing: border-box; /*Element size includes borders and padding, context shrinks   */
+}
+
+div {
+    border-radius: 27px;
+    border-color: #2a8a8a;
+    border-style: solid;
+    border-width: 20px;
+    text-align: center;
+    width: 75%;
+    padding: 20px;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+    
+}
+
+/*selected Input and select */
+input[type=text], select{  /* select element is used to create drop down list*/
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block; /*same as inline except allows for width&height adjustment, top&bottom padding/margin are respected*/
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width .5s ease-in-out;
+    text-align: center;
+}
+
+input[type=email] {  
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width .5s ease-in-out;
+    text-align: center;
+}
+
+.btn{
+    width: 130px;
+    background-color: #4caf50;
+    color: white; 
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: width .5s ease-in-out;
+
+}
+/* effects */
+.btn:hover{
+    background-color: #45a049;
+    width: 75%;
+}
+
+input[type=text]:hover, input[type=email]:hover, select:hover{
+    width: 75%;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+select:focus{
+    background-color: lightblue;
+    margin-bottom: 30px;
+}
+

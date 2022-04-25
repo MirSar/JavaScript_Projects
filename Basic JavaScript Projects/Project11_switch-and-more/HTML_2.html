@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Link to CSS_1 Styling Sheet-->
+        <link rel="stylesheet" type="text/css" href="./CSS/CSS_1.css">
+       
+        <!--Link to JavaScript main.js using defer-->
+        <script src="JS/JavaScript_2.js" defer></script>
+
+        <!--google icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <title>Project 11: Basic Contact Form </title>
+
+    </head>
+
+    <body>
+        <H1>Project 11: Basic Contact Form </H1>
+
+        <div>
+            <h3>Thank you for your interest. Please enter your contact information</h3>
+
+            <form name="contactForm" action="/action_page.php" onsubmit="return validationForm()" method="post">
+                
+                <i class="material-icons" style="font-size:30px;color:green">account_circle</i>  <!--user icon-->
+                <label for="fname">First Name:</label><br> <!--label is useful: screen reading, clicking (target area), for should = id of input element to bind-->
+                <input type="text" id="fname" name="fname" placeholder="Your name..."> <br> <!--note: name is used in HTTP request sent to server as variable name-->
+               
+                <i class="material-icons" style="font-size:30px;color:green">account_circle</i>  <!--user icon-->
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Your last name..."><br>
+
+                <i class="material-icons" style="font-size:30px;color:green">contact_mail</i>
+                <label for="email">email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your email..."><br>
+
+                <i class="material-icons" style="font-size:30px;color:green">person_pin</i>
+                <label for="country">Country</label><br>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <button type="submit" class="btn">Submit<i class="material-icons" style="float: right;">thumb_up</i></button>
+                <!--input type="submit" value="submit"--> 
+                <br>
+                <input type="reset">  <!--resets all form values to thier default values-->
+
+            </form>
+
+        </div>
+        
+     <br><br>   
+    </body>
+
+</html>
