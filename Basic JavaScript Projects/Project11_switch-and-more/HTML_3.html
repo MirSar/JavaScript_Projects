@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--general style-->
+        <style>
+            body {background-color: ivory;}
+
+            h1 {background-color: rgba(15, 194, 15, 25%); 
+                width: fit-content;
+                box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+            h3 {
+                color: blue;
+                width: fit-content;
+                text-align: center;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+
+            div {
+                background-color: antiquewhite;
+                width: fit-content;
+                margin-left: auto; /*this is to center*/
+                margin-right: auto; /*this is to center*/
+            }
+        </style>
+
+        <!--Link to JavaScript main.js using defer-->
+        <script src="JS/JavaScript_3.js" defer></script>
+        
+        <title>Project 11: Data Attribute </title>
+    </head>
+
+    <body>
+
+        <H1>Project 11: Data Attribute </H1>
+        
+        <div class="dataAttribute">
+            
+            <h3>Comic Book Characters</h3>
+            <p>click on the Fictitious Universe for it's greatest character</p>
+            
+            <h3 id="charOutput" style="background-color: gold;"></h3>
+            <ul>
+                <li onclick="displayChar(this)" id="DC" 
+                data-char_type="The Dark Knight - Batman">Detective Comics (DC)</li>
+                <li onclick="displayChar(this)" id="Marvel" 
+                data-char_type="Tech Genious - Iron Man">Marvel Comics</li>
+                <li onclick="displayChar(this)" id="StarWars" 
+                data-char_type="Jedi Hero - Luke Skywalker">Star Wars</li>
+                <li onclick="displayChar(this)" id="StarTrek" 
+                data-char_type="United Federation Captain - Jean-Luc Picard">Star Trek</li>
+            </ul>
+
+        </div>
+       
+        
+
+        <br><br>
+    </body>
+
+</html>
