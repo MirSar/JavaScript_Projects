@@ -1,0 +1,29 @@
+/***********************************
+Online game: Tic-Tac-Toe
+links: TicTacToe.html, TicTacToe.js
+************************************/
+/* Container: table and canvas */
+.center-container {
+    width: 609px;
+    margin: 0 auto;  /* to center the container */
+    margin-top: 50px; /* 50px down from top */
+}
+
+table {
+    border-collapse: collapse; /*collapses table borders into 1 border. */
+    border-style: hidden; /* hides the outter borders */
+}
+
+td {
+    cursor: pointer; /* cursor = index finger when hovered over the element */
+    border: 4px solid rgba(252, 169, 3, .9);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+canvas {
+    position: absolute; /* position of canvas set to top-left of container */
+    z-index: 10; /* overlays our canvas on top of the table */
+    pointer-events: none; /* makes our canvas invisible */
+}
