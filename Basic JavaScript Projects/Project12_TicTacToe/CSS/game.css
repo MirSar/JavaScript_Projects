@@ -2,7 +2,17 @@
 Online game: Tic-Tac-Toe
 links: TicTacToe.html, TicTacToe.js
 ************************************/
-/* Container: table and canvas */
+
+/*=======================
+General style background 
+=========================*/
+body{
+    background-color: rgba(249, 126, 241, 0.874);
+}
+
+/*=========================
+Container: table and canvas 
+============================*/
 .center-container {
     width: 609px;
     margin: 0 auto;  /* to center the container */
@@ -16,7 +26,7 @@ table {
 
 td {
     cursor: pointer; /* cursor = index finger when hovered over the element */
-    border: 4px solid rgba(252, 169, 3, .9);
+    border: 9px solid rgb(6, 247, 114);
     padding: 0px;
     width: 200px;
     height: 200px;
@@ -27,3 +37,27 @@ canvas {
     z-index: 10; /* overlays our canvas on top of the table */
     pointer-events: none; /* makes our canvas invisible */
 }
+
+/*=======================
+glow effect on text
+========================*/
+.glow {
+    opacity: 1;
+    font-size: 50px;
+    color: rgb(65, 192, 192);
+    font-variant-caps: small-caps;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+} 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000fe6, 0 0 40px #e60073, 0 0 50px #d7e600, 0 0 60px #00a5e6, 0 0 70px #000fe6;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14, 0 0 80px #39FF14;
+    }
+}
+/*=========================
+
+===========================*/
