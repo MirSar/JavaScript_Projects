@@ -16,11 +16,11 @@ function placeXorO(squareNumber) {
         //This condition checks who'sturn it is.
         if (activePlayer === 'X') {
             //If activePlayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/O-profile_6.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'.
         } else {
             //If activePlayer is equal to 'O', the o.png is placed in HTML.
-            select.style.backgroundImage = 'url("images/o.png")';
+            select.style.backgroundImage = 'url("images/O-profile_3.png")';
         }
         //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -37,13 +37,13 @@ function placeXorO(squareNumber) {
         }
 
         //This function plays placement sound.
-        audio('media/place.mp3');
+        audio('media/ice_cubes.mp3');
         //This condition cdhecks to see if it is computers turn.
         if (activePlayer === 'O') {
             //This function disables clicking for computer choice.
             disableClick();
             //This function waits 3 second before computer places image and enables click.
-            setTimeout(function () { computersTurn(); }, 3000);
+            setTimeout(function () { computersTurn(); }, 4000);
         }
         //Returning true is needed for our computersTurn() function to work.
         return true;
@@ -111,11 +111,9 @@ function checkWinConditions() {
     else if (selectedSquares.length >= 9) {
         disableClick();
         //This function playes the tie game sound.
-        audio('media/tie.mp3');
-
-        //This function sets a .3 sec timer before the resetGame is called.
-        setTimeout(function () { resetGame(); }, 1000);
-
+        audio('media/Cat_Meow.mp3');
+        //This function sets a 3 sec timer before the resetGame is called.
+        setTimeout(function () { resetGame(); }, 3000);
     }
 
     //This function checks if an array includes 3 strings. It is used to check for
@@ -135,7 +133,6 @@ function checkWinConditions() {
 function disableClick() {
     //This makes our body unclickable.
     body.style.pointerEvents = 'none';
-
     //This makes our body clickable again after 1 second.
     setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
 }
@@ -181,14 +178,19 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This method indicates the end point in our line.
         c.lineTo(x, y)
         //This method sets the width of our line.
-        c.lineWidth = 10;
+        c.lineWidth = 50;
         
         //This method sets the color of our line.
-        c.strokeStyle = 'rgba(70,255,33,.8)';
-
+        c.strokeStyle = 'rgba(242, 249, 16, 0.5)';
+        c.fillStyle = 'red';
+        c.shadowColor = 'rgb(4, 249, 78)';
+        c.shadowBlur = 70;
+        c.shadowOffsetX = 0;
+        c.shadowOffsetY = 0;
         disableClick();
         //This method draws everything we laid out above.
         c.stroke();
+        c.fill();
         
         //This condition checks if we've reached the endpoint.
         if (x1 <= x2 && y1 <= y2) {
@@ -225,12 +227,11 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing
     disableClick();
     //This line plays the win sounds.
-    audio('media/winGame.mp3');
+    audio('media/applause.mp3');
     //This line calls our main animation loop.
-    disableClick();
     animateLineDrawing();
     //This line waits 1 second. Then, clears canvas, resets game, and allows clicking again.
-    setTimeout(function () { clear(); resetGame(); }, 3000);    
+    setTimeout(function () { clear(); resetGame(); }, 4000);    
 }
 
 //This function resets the game in the event of a tie or a win.
