@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+    <meta name="description" content="A basic HTML, CSS and JS calculator">
+    <meta name="author" content="Mirwais Sarwary">
+    <!--Links-->
+    <script src="JS/calculator_JS.js" defer></script>
+    <link rel="stylesheet" href="CSS/calculator_CSS.css">
+
+</head>
+
+<body>
+    
+    <h1>Project 13: Basic Calculator</h1>
+
+    <div class="calculator">
+        <!--Calculator Input Screen-->
+        <input type="text" class="calculator-screen" value="0" disabled />
+        
+        <div class="calculator-keys">
+            <!--Calculator buttons -Operator keys-->
+            <button type="button" class="operator" value="+"><b>+</b></button>
+            <button type="button" class="operator" value="+"><b>-</b></button>
+            <button type="button" class="operator" value="*"><b>&times;</b></button>
+            <button type="button" class="operator" value="/"><b>&divide;</b></button>
+
+            <!--Calculator buttons -Number keys-->
+            <button type="button"  value="7"><b>7</b></button>
+            <button type="button"  value="8"><b>8</b></button>
+            <button type="button"  value="9"><b>9</b></button>
+
+            <button type="button"  value="4"><b>4</b></button>
+            <button type="button"  value="5"><b>5</b></button>
+            <button type="button"  value="6"><b>6</b></button>
+
+            <button type="button"  value="1"><b>1</b></button>
+            <button type="button"  value="2"><b>2</b></button>
+            <button type="button"  value="3"><b>3</b></button>
+
+            <button type="button"  value="0"><b>0</b></button>
+
+            <!--Calculator buttons - functions-->
+            <button type="button" class="decimal function" value="."><b>.</b></button>
+            <button type="button" class="all-clear function" value="all-clear"><b>AC</b></button>
+            <button type="button" class="equal-sign operator" value="="><b>=</b></button>
+        </div>
+
+    </div>
+
+    <br><br>
+</body>
+
+</html>
