@@ -69,6 +69,7 @@ function Handle_Operator(Next_Operator) {
         result =(result * 1).toString()
         Calculator.Display_Value = parseFloat(result);
         Calculator.First_Operand = parseFloat(result);
+        
     }
     Calculator.Wait_Second_Operand = true;
     Calculator.operator = Next_Operator;
@@ -97,6 +98,15 @@ function Update_Display() {
 
 Update_Display();
 
+//This function takes a string parameter of the path you set earlier for
+//placement sound (/.media/place.mp3')
+function audio(audioURL) {
+    //we create a new audio object and we pass the path as a parameter.
+    let audio = new Audio(audioURL);
+    //Play method plays our audio sound.
+    audio.play();
+}
+
 //this section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
 keys.addEventListener('click', (event) => {
@@ -106,22 +116,38 @@ keys.addEventListener('click', (event) => {
     if (!target.matches('button')) {
         return;
     }
+
     if (target.classList.contains('operator')) {
         Handle_Operator(target.value);
         Update_Display();
+        audio('media/Cha_Ching.mp3');
         return;
     }
+    if (target.classList.contains('equal-sign')) {
+        Handle_Operator(target.value);
+        Update_Display();
+        audio('media/got-snake-eyes.mp3');
+        return;
+    }
+
+
     if (target.classList.contains('decimal')) {
         Input_Decimal(target.value);
         Update_Display();
+        audio('media/Whip.mp3');
         return;
     }
+
     //ensures that AC clears the numbers from the calculator
     if (target.classList.contains('all-clear')) {
         Calculator_Reset();
         Update_Display();
+        audio('media/clear-throat.mp3');
         return;
     }
+
     Input_Digit(target.value);
     Update_Display();
+    //This function plays placement sound.
+    audio('media/Button.mp3');
 })

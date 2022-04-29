@@ -6,9 +6,37 @@ Author: Mirwais Sarwary
 **********************************************
 **********************************************/
 /* Let's beautify :) */
+.body {
+    background:url("../images/Glacier.png") no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    display: block;
+    z-index: -1;
+    height: 900px;
+}
+h1 {
+    text-align: center; 
+    color: rgb(17, 25, 165); 
+    background-color: rgba(255, 215, 0,.5);
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    font-variant: small-caps;
+    font-family: cursive;
+    font-size: 3rem;
 
+}
+.greeting {
+    text-align: center; 
+    color: rgb(17, 25, 165); 
+    background-color: rgba(240, 223, 101, 0.3);
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: fantasy;
+    font-size: larger;
+}
 html {
-    font-size: 70%;
     /*Include padding and border in the element's total width and height*/
     box-sizing: border-box;
 }
@@ -25,7 +53,8 @@ html {
     border-radius: 7px;
     /* positioned w.r.t. it's first positioned(non static) ancestor element */
     position: absolute;
-    top: 50%;
+    top: 40%;
+    bottom: 50%;
     left: 50%;
     /*2d transformation - translate= moves the element*/
     transform: translate(-50%, -50%);
@@ -99,4 +128,5 @@ button:hover {
     /*shorthand for grid-row-gap and grid-column-gap*/
     grid-gap: 20px;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
