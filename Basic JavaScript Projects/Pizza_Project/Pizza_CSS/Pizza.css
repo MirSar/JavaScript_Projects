@@ -1,0 +1,128 @@
+/*********************************************
+Online Menu - Pizzaria
+content="A HTML, CSS and JS online menu for a Pizzaria"
+Author: Mirwais Sarwary
+**********************************************
+Let's beautify :)
+**********************************************/
+/*General styling */
+
+body {
+    background-image: linear-gradient(black,white,red,white,green);
+    background-repeat: no-repeat ;
+}
+
+h1 {
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+    color: aqua;
+    text-align: center;
+}
+
+h3 {
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    color: rgb(247, 85, 85);
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: chartreuse;
+}
+
+/*Using Grid layout system for better control :) */
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: .25fr 1fr 1fr 1fr .25fr;
+    grid-template-rows: 50px 50px 200px auto;
+    grid-template-areas: 
+        ". T T T ."
+        ". . B . ."
+        ". M N O ."
+        ". S P . .";
+    
+    /*applies for all items - align along the block(column) axis*/
+    align-items: center;
+
+    /*handling individual items, so this is not needed*/
+    /*justify-content: space-between;*/
+}
+
+#title {
+    grid-area: T; 
+    max-height: fit-content;
+}
+
+#btnOrder {
+    grid-area: B; 
+    max-height: fit-content;
+    border-radius: 27px;
+    background-color: yellow;
+}
+
+#menu1 {
+    grid-area: M; 
+    min-height: 200px; 
+    min-width: 200px;
+    
+    /*alternative placement method to area*/
+    /*grid-area: 3/2/4/3;*/
+}
+
+#menu2 {
+    grid-area: N; 
+    min-height: 200px; 
+    min-width: 200px;
+
+    /*alternative placement method to area*/
+    /*grid-area: 3/3/4/4;*/
+}
+
+#menu3 {
+    grid-area: O; 
+    min-height: 200px; 
+    min-width: 200px;
+
+    /*alternative placement method to area*/
+   /* grid-area: 3/4/4/5;*/
+}
+
+#showText {
+    grid-area: S; 
+    min-height: 200px;
+    justify-self: end;
+
+    color: rgb(67, 63, 149);
+    background-image:linear-gradient(to bottom, rgba(128, 128, 128,.5), white); 
+    border-radius: 25px;
+    
+    /*alternative placement method to area*/ 
+   /* grid-area: 4/2/5/4; */
+}
+
+#totalPrice {
+    grid-area: P; 
+    width: fit-content;
+    justify-self: left;
+
+    /*alternative placement method to area*/
+   /* grid-area: 4/4/5/5;*/
+}
+
+.menuBG {
+    background-color: rgba(137, 190, 190,.5); 
+    border-radius: 30px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/*used in Javascript --for ordered */
+.receiptText {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(16, 16, 71, 0.639);
+    background-color: rgba(240, 248, 255,.5);
+    border-radius: 9px;
+}
