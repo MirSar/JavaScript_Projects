@@ -32,8 +32,10 @@ div {
 .grid-container {
     display: grid;
     gap: 5px;
+    /*columns and rows spacing arrangement using free space unit*/
     grid-template-columns: .25fr 1fr 1fr 1fr .25fr;
     grid-template-rows: 50px 50px 200px auto;
+    /*allows for use of grid-area names for the layout*/
     grid-template-areas: 
         ". T T T ."
         ". . B . ."
