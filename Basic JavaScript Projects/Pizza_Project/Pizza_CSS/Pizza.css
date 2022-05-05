@@ -51,7 +51,7 @@ div {
 
 #title {
     grid-area: T; 
-    max-height: fit-content;
+    min-height: fit-content;
 }
 
 #btnOrder {
