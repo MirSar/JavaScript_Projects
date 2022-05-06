@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+   <script>
+        // $() = jQuery(). (document) we are requesting the entire page. ready what we are checking for.
+        // when document is ready (the page is running on the browser) do function()
+        $(document).ready (function(){
+            //we are building an html so we need the following code
+            //to our blank html page append ()
+            $("html").append( //grab the <html>tag and append the following
+                //the data will be in string form so we can open with " and use\ to continue to next line
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery - Peek-A-Boo :) </h1>\
+                            <p id='1'>click: show gold then fade header, delay, show again</p>\
+                            <p id='2'>click: to reset</p>\
+                            <p id='3'>Click: to hide the header</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            
+            //To style the paragraph we can do the following
+            //jQuery.com has a section on CSS()
+            $("p").css({"color":"green"}); //target the p tags go to css of it and change the color to red
+            $("#2").css({"color":"red"}); //target id=2
+
+            //This example will use the mouse events
+            $("#3").click(function(){ //targetting id=3, on click do function()
+                //using Effects section, hide()method to hide h1
+                $("h1").hide("slow"); //we can add additonal methodeffects and/or make the methods more specific
+            }); 
+            $("#2").on("click", function(){ //targetting id=2, using .on mehtod to call click effect and to do function()
+                //using Effects section, show()method to show h1
+                $("h1").show("fast");
+                $("p").css({"background-color":"white"});
+            }); 
+
+            // Binding multiple events with different handlers
+            $("#1").on(
+                "click", function() { 
+                $("p").css({"background-color":"gold"});
+                // Hide using a fade out animation over 1.5 seconds
+                $( "h1" ).fadeOut( 1500 ).delay(1500).show(500);
+            });
+
+        });   
+    </script>
+
+</html>
