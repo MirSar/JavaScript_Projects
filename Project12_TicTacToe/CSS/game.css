@@ -1,0 +1,77 @@
+/***********************************
+Online game: Tic-Tac-Toe
+links: TicTacToe.html, TicTacToe.js
+************************************/
+
+/*=======================
+General style background 
+=========================*/
+#body {
+    background:url("../images/bkg_beach.png") no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    display: block;
+    z-index: -1;
+}  
+.greeting {
+    text-align: center; 
+    color: rgb(15, 18, 73); 
+    background-color: rgba(11, 229, 229,.3);
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*=========================
+Container: table and canvas 
+============================*/
+.center-container {
+    width: 608px;
+    margin: 0 auto;  /* to center the container */
+    margin-top: 50px; /* 50px down from top */
+}
+
+
+table {
+    border-collapse: collapse; /*collapses table borders into 1 border. */
+    border-style: hidden; /* hides the outter borders */
+}
+
+td {
+    cursor: pointer; /* cursor = index finger when hovered over the element */
+    border: 9px solid rgb(6, 247, 114);
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+
+canvas {
+    position: absolute; /* position of canvas set to top-left of container */
+    z-index: 10; /* overlays our canvas on top of the table */
+    pointer-events: none; /* makes our canvas invisible */
+}
+
+/*=======================
+glow effect on text
+========================*/
+.glow {
+    opacity: 1;
+    font-size: 50px;
+    color: rgb(16, 55, 109);
+    font-variant-caps: small-caps;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+   /* background-color: rgba(67, 232, 177,.2);
+    */margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+} 
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000fe6, 0 0 40px #e60073, 0 0 50px #d7e600, 0 0 60px #00a5e6, 0 0 70px #000fe6;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14, 0 0 50px #39FF14, 0 0 60px #39FF14, 0 0 70px #39FF14, 0 0 80px #39FF14;
+    }
+}
