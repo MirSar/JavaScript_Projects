@@ -1,0 +1,223 @@
+/***********************************************
+general styling 
+*************************************************/
+*{
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url('../images/tree_light.png');
+     scroll-behavior: smooth;
+}
+
+h1 {background-color: rgba(15, 194, 15, 25%); 
+    width: fit-content;
+    box-shadow: 5px 10px rgba(72, 90, 180, 25%);
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+h3 {
+    color: blue;
+    width: fit-content;
+    text-align: center;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+}
+
+div {
+    background-color: rgb(200, 230, 206);
+    width: fit-content;
+    margin-left: auto; /*this is to center*/
+    margin-right: auto; /*this is to center*/
+    padding: 1%;
+    border-radius: 15px;
+}
+
+
+/**********************************************
+For the document fade-out effect
+***********************************************/
+body {
+    opacity: 1;
+    transition: 3s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/**************************************************
+phone number validation style
+***************************************************/
+.error {
+    color: red;
+    size: 80%;
+}
+.hidden {
+    display: none;
+}
+
+/**************************************************
+PopUp Contact Form
+***************************************************/
+.popUpContact {
+    width: 75%;
+    min-height: 200px;
+
+}
+/*button used to open contact form*/
+.open-button {
+    background-color: rgb(33, 90, 174);
+    color: rgb(243, 244, 238);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: .8;
+    border-radius: 0px;
+    width: 169px;
+    border-radius: 30px;
+    /*moves the button to bottom right of div */
+    position: relative;
+    bottom: -20px;
+    float: right;
+    
+}
+/*Make the PopUp Form hidden by default*/
+.form-popup {
+    display: none; /*hidden by default*/
+    position: fixed;
+    float: right;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #1bad0e;
+    z-index: 10;
+}
+
+/*adding style to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+/*full width input fields */
+.form-container input[type=text], 
+.form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1
+}
+
+/*When the inputs are in focus */
+.form-container input[type=text]:focus, 
+.form-container input[type=password]:focus {
+    background: rgb(171, 193, 228);
+    outline: none;
+}
+
+/*Styling the submit/login & close buttons */
+.form-container .btn {
+    background-color: #1bad0e;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    margin-bottom: 10px;
+    opacity: .8;
+    border-radius: 20px;
+}
+
+/*add background color for the cancel button */
+.form-container .cancel {
+    background-color: rgb(205, 44, 44);
+}
+
+/*hover effect for the buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+/**************************************************
+Animation Challenge | keyframe rule
+***************************************************/
+.Anima-keyframe {
+    width: 800px;
+    background-color: white;
+}
+
+#hawk {
+    width: 350px;
+    height: 260px;
+    background-image: url('../images/hawk_1.png');
+    position: relative;
+    animation: flight 10s infinite;
+}
+
+@keyframes flight {
+    0%  {left: -100px; background-image: url('../images/hawk_1.png');}
+    10% {left: -60px; background-image: url('../images/hawk_2.png');}
+    20% {left: -20px; background-image: url('../images/hawk_3.png');}
+    30% {left: 00px; background-image: url('../images/hawk_4.png');}
+    40% {left: 20px; background-image: url('../images/hawk_5.png');}
+    50% {left: 60px; background-image: url('../images/hawk_6.png');}
+    60% {left: 80px; background-image: url('../images/hawk_7.png');}
+    70% {left: 100px; background-image: url('../images/hawk_8.png');}
+    80% {left: 120px; background-image: url('../images/hawk_9.png');}
+    90% {left: 140px; background-image: url('../images/hawk_1.png');}
+    100%{left: 160px; background-image: url('../images/hawk_2.png');}
+}
+
+/**************************************************
+Zoom In and Out Challenge
+***************************************************/
+.zoom {
+    padding: 50px;
+    background-color: #1bad0e;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.3);
+}
+
+/**************************************************
+bookmark Challenge
+***************************************************/
+.navbarLinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/**************************************************
+slideshow Challenge
+***************************************************/
+.slideShow {
+    margin: 50px auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(72, 90, 180, 25%);
+}
+.slideShow img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
