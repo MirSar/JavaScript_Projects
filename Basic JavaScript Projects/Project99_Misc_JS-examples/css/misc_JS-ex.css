@@ -63,24 +63,29 @@ phone number validation style
 PopUp Contact Form
 ***************************************************/
 .popUpContact {
-    width: 75%;
-    min-height: 200px;
-
+    width: 100%;
+    min-height: 100px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 255,.5);
+    color: white;
 }
+
 /*button used to open contact form*/
 .open-button {
     background-color: rgb(33, 90, 174);
     color: rgb(243, 244, 238);
     padding: 16px 20px;
-    border: none;
     cursor: pointer;
     opacity: .8;
-    border-radius: 0px;
     width: 169px;
     border-radius: 30px;
     /*moves the button to bottom right of div */
-    position: relative;
-    bottom: -20px;
+    /*position: relative;*/
+    /*making the button sticky button*/
+    position:sticky;
+    bottom: 5px;
+    top: 5px;
+
     float: right;
     
 }
@@ -147,8 +152,10 @@ PopUp Contact Form
 Animation Challenge | keyframe rule
 ***************************************************/
 .Anima-keyframe {
-    width: 800px;
+    width: 700px;
+    height: 400px;
     background-color: white;
+    border-radius: 80px;
 }
 
 #hawk {
@@ -197,6 +204,7 @@ bookmark Challenge
     top: 0;
     left: 0;
     display: flex;
+    background-color: white;
 }
 ul{
     list-style-type: none;

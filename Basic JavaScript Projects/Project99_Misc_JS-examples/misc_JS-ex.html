@@ -34,12 +34,14 @@
 
     <h1>JavaScript Course challenges</h1>
 
+    <br><br>
     <div class="fontSizeVW" id="xml">
         <h3>This is an example of XML.</h3>
         <p>The title below is the output of an XML script <br> It's written with font-size units of view width.</p>
         <p id="XML_Example"style="font-size: 10vw; margin:0;" >did not work</p>
-    </div> <br>
-
+    </div> 
+    
+    <br><br>
     <div class="form" id="phone">
         <h3>Form challenge| phone number</h3>
         <form id="myForm_1" name="myForm_1">
@@ -50,18 +52,19 @@
             <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
             <input type="submit" value="Submit">
         </form>
-    </div> <br>
+    </div> 
+    
 
+    <br><br>
     <div class="popUpContact" id="contactForm">
         
-        <h3>PopUp Contact Form</h3>
+        <h3 style="color: white;">PopUp Contact Form</h3>
         <p style="text-align: center;">So, you wish to log in? That's great! <br>Please click the <b>Open Form</b> button</p>
-        <button class="open-button" onclick="openPopUpForm()">Open Form</button>
-
+        
         <div class="form-popup" id="myForm_2">
+
             <form action=" " class="form-container">
                 <h2>Login</h2>
-
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -71,23 +74,31 @@
                 <button type="submit" class="btn">Login</button>
                 <button type="button" class="btn cancel" onclick="closePopUpForm()">Close</button>
             </form>
-        </div>
+            
+        </div>  
+    </div>
+    <!--Sticky button is positioned outside the div container-->
+    <button class="open-button" onclick="openPopUpForm()">Open Form</button>
+    
 
-    </div><br>
 
+    <br><br><br><br>
     <div class="Anima-keyframe" id="anima">
-        
         <h3>Animation challenge | keyframe rule</h3>
         <div id="hawk"></div>
+    </div>
+    
 
-    </div><br>
 
+    <br><br>
     <div class="zoomInOut" id="zoom">
         <h3>Zoom In and Out challenge</h3>
         <div class="zoom">
             <img src="./images/Emeral-eyes.png" width="500px">
         </div>
     </div>
+
+
 
     <div class="navbarLinks">
         <ul>
