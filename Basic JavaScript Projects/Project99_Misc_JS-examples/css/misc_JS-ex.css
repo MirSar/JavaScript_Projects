@@ -229,3 +229,12 @@ slideshow Challenge
     right: 10px;
     bottom: 10px;
 }
+
+/**************************************************
+JSON Challenge
+***************************************************/
+#jsonStuff {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

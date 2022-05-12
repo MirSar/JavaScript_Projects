@@ -63,3 +63,54 @@ $(document).ready(function () { //when the document is ready
             .end().appendTo('.slideShow'); //takes the first img and append it to the end of the stack
     }, 3000);
 });
+
+/******************************************
+JSON.stringify() and JSON.parse()
+*******************************************/
+$(document).ready(function () {
+    //create JS dictionary object
+    var pet = {
+        name: "Ronin",
+        type: "dog",
+        breed: "GSD & Huskie",
+        color: "brown, white, and black",
+        hobby: "being a good dog"
+    };
+    //convert JS object to string format
+    var JSONstring = JSON.stringify(pet);
+    //output the string format
+    $("#petFile").click(function () {
+        $("#jsonOutput").html("Your requested file: " + "<br>" + JSONstring);
+    });
+
+    //coverting string format back to JS object with parse()
+    var petStringToObj = JSON.parse(JSONstring);
+    
+    //accessing the reverted object
+    $("#petName").click(function () {
+        $("#jsonOutput").html("My name is " + petStringToObj.name);
+        $("#jsonStuff").css({"background-image": "url('./images/Ronin_pup.png')", "color":"white"}); //change CSS background and color
+    });
+    $("#petType").click(function () {
+        $("#jsonOutput").html("The best type ever, which is "+ petStringToObj.type);
+    });
+    $("#petBreed").click(function () {
+        $("#jsonOutput").html("My breed is "+ petStringToObj.breed);
+    });
+    $("#petColor").click(function () {
+        $("#jsonOutput").html("My colors are "+ petStringToObj.color);
+    });
+    $("#petHobby").click(function () {
+        $("#jsonOutput").html("I love " + petStringToObj.hobby);
+    });
+
+    //Storing data to my local storage
+    var myStorage = localStorage.setItem("name", "CoffeeBean Ro");
+    
+    //accessing pet name from local storage
+    $("#petName2").click(function () {
+        $("#jsonOutput").html("My name from the local Storage is " + localStorage.getItem("name"));
+    });
+
+
+});
