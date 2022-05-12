@@ -81,6 +81,7 @@ li {
     border: none;
     border-radius: 5px;
     margin: 5px;
+    padding-bottom: 5px;
 }
 .remove:hover {
     background-color: whitesmoke;
