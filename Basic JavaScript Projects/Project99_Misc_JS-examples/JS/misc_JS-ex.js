@@ -112,5 +112,27 @@ $(document).ready(function () {
         $("#jsonOutput").html("My name from the local Storage is " + localStorage.getItem("name"));
     });
 
-
 });
+
+/******************************************
+audio play on click and double click
+*******************************************/
+//This function takes a string parameter of the path you set earlier for sound (/.media/xxx.mp3')
+function audio(audioURL) {
+    //we create a new audio object and we pass the path as a parameter.
+    let audio = new Audio(audioURL);
+    //Play method plays our audio sound.
+    audio.play();
+}
+//on single click
+function playHawkSound() {
+    //This line plays the win sounds.
+    audio('./media/hawk_1.mp3');
+}
+//on double click
+function playHawkSound_2() {
+    //This line plays the win sounds.
+    audio('./media/birdsAndRain.mp3');
+}
+
+ 

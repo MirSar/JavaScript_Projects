@@ -180,6 +180,16 @@ Animation Challenge | keyframe rule
     100%{left: 160px; background-image: url('../images/hawk_2.png');}
 }
 
+#hawkSound {
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+#hawkSound:hover {
+    background-color: white;
+    color: blue;
+}
+
 /**************************************************
 Zoom In and Out Challenge
 ***************************************************/
